@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+  <menu>
+    <add id="Dev_Grid::parent" title="Mavenbird" module="Dev_Grid" sortOrder="20" resource="Magento_Catalog::categories" />
+    <add id="Dev_Grid::home" title="Category Listing" module="Dev_Grid" sortOrder="1000" parent="Dev_Grid::parent" resource="Magento_Catalog::categories" action="dev_grid/index/index" />
+  </menu>
+</config>
