@@ -135,7 +135,7 @@ return [
         'localhost'
     ],
     'install' => [
-        'date' => 'Wed, 18 Oct 2023 10:50:00 +0000'
+        'date' => 'Thu, 02 Nov 2023 10:14:36 +0000'
     ],
     'system' => [
         'default' => [

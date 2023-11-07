@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+<menu>
+    <add id="Test_Form::parent" title="Mavenbird" module="Test_Form" sortOrder="20" resource="Magento_Catalog::categories" />
+    <add id="Test_Form::home" title="Form Data" module="Test_Form" sortOrder="1000" parent="Test_Form::parent" resource="Magento_Catalog::categories" action="test_form/index/index" />
+</menu>
+</config>

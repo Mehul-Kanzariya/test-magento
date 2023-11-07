@@ -327,10 +327,18 @@ return [
         'Magento_Wishlist' => 1,
         'Magento_WishlistAnalytics' => 1,
         'Magento_WishlistGraphQl' => 1,
-        'Dev_Grid' => 1,
+        'Cloudways_Newmodule' => 1,
+        'Company_Module' => 1,
+        'Dev_Grid' => 0,
+        'MB_Grid' => 1,
+        'Magefan_AdminUserGuide' => 1,
+        'Magefan_Community' => 1,
+        'Magefan_Crowdin' => 1,
+        'Magefan_Translation' => 1,
+        'Mavenbird_Testform' => 1,
         'PayPal_Braintree' => 1,
         'PayPal_BraintreeGraphQl' => 1,
-        'Sparsh_ProductInquiry' => 1,
-        'Temando_ShippingRemover' => 1
+        'Temando_ShippingRemover' => 1,
+        'Test_Form' => 1
     ]
 ];
