@@ -4,15 +4,15 @@ namespace Test\Form\Controller\Adminhtml\Index;
 
 use Magento\Framework\Controller\ResultFactory;
 
-class Edit extends \Magento\Backend\App\Action
+class Add extends \Magento\Backend\App\Action
 {
     /**
-     * @return \Magento\Framework\Controller\ResultFactory
+     * @return \Magento\Framework\View\Result\PageFactory
      */
     public function execute()
     {
         $resultPage = $this->resultFactory->create(ResultFactory::TYPE_PAGE);
-        $resultPage->getConfig()->getTitle()->prepend(__('Edit Record'));
+        $resultPage->getConfig()->getTitle()->prepend(__('Add New Record'));
         return $resultPage;
     }
 }

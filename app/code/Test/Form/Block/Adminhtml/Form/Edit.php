@@ -1,62 +1,37 @@
 <?php
+// namespace Test\Form\Block\Adminhtml\Form;
+
+// use Magento\Framework\View\Element\Template;
+// use Test\Form\Model\Form;
+
+// class Edit extends Template
+// {
+//     public function getFormId($entity_id)
+//     {
+//         return $entity_id;
+//     }
+// }
+
 namespace Test\Form\Block\Adminhtml\Form;
 
-use Magento\Backend\Block\Widget\Form\Generic;
+use Magento\Framework\View\Element\Template;
+use Test\Form\Model\Form; // Replace with your data model
 
-class Edit extends Generic
+class Edit extends Template
 {
-    protected function _prepareForm()
+    protected $form;
+
+    public function __construct(
+        \Magento\Framework\View\Element\Template\Context $context,
+        Form $form, // Replace with your data model
+        array $data = []
+    ) {
+        $this->form = $form;
+        parent::__construct($context, $data);
+    }
+
+    public function getFormData($entity_id)
     {
-        $form = $this->_formFactory->create(
-            ['data' => ['id' => 'edit_form', 'action' => $this->getData('action'), 'method' => 'post']]
-        );
-
-        $fieldset = $form->addFieldset(
-            'base_fieldset',
-            ['legend' => __('Edit Your Data')]
-        );
-
-        // Add Username Field
-        $fieldset->addField(
-            'username',
-            'text',
-            [
-                'name' => 'username',
-                'label' => __('Username'),
-                'title' => __('Username'),
-                'required' => true,
-            ]
-        );
-
-        // Add Email Field
-        $fieldset->addField(
-            'email',
-            'text',
-            [
-                'name' => 'email',
-                'label' => __('Email'),
-                'title' => __('Email'),
-                'required' => true,
-                'class' => 'validate-email',
-            ]
-        );
-
-        // Add Telephone Field
-        $fieldset->addField(
-            'telephone',
-            'text',
-            [
-                'name' => 'telephone',
-                'label' => __('Telephone'),
-                'title' => __('Telephone'),
-                'required' => true,
-                'class' => 'validate-phoneStrict',
-            ]
-        );
-
-        $form->setUseContainer(true);
-        $this->setForm($form);
-
-        parent::_prepareForm();
+        return $this->form->load($entity_id); // Replace with your data retrieval logic
     }
 }

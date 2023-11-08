@@ -54,18 +54,58 @@ class Actions extends Column
      */
     public function prepareDataSource(array $dataSource)
     {
+        // if (isset($dataSource['data']['items'])) {
+        //     foreach ($dataSource['data']['items'] as &$item) {
+        //         $name = $this->getData('name'); 
+        //         if (isset($item['entity_id'])) {
+        //             $item[$name]['view']   = [
+        //                 'href'  => $this->_urlBuilder->getUrl('test_form/index/edit', ['id' => $item['entity_id']]),
+        //                 'label' => __('Edit')
+        //             ];
+        //             $item[$name]['view']   = [
+        //                 'href' => $this->urlBuilder->getUrl(
+        //                     'test_form/index/delete',
+        //                     [
+        //                         'id' => $item['entity_id'
+        //                         ],
+        //                     ]
+        //                 ),
+        //                 'label' => __('Delete'),
+        //             ];
+        //         }
+        //     }
+        // }
         if (isset($dataSource['data']['items'])) {
             foreach ($dataSource['data']['items'] as &$item) {
-                $name = $this->getData('name'); 
                 if (isset($item['entity_id'])) {
-                    $item[$name]['view']   = [
-                        'href'  => $this->_urlBuilder->getUrl('test_form/index/edit', ['id' => $item['entity_id']]),
-                        'label' => __('Edit')
+                    $item[$this->getData('name')] = [
+                        'edit' => [
+                            'href' => $this->_urlBuilder->getUrl(
+                                'test_form/index/edit',
+                                [
+                                    'entity_id' => $item['entity_id'
+                                    ],
+                                ]
+                            ),
+                            'label' => __('Edit'),
+                        ],
+                        'delete' => [
+                            'href' => $this->_urlBuilder->getUrl(
+                                'test_form/index/delete',
+                                [
+                                    'entity_id' => $item['entity_id'
+                                    ],
+                                ]
+                            ),
+                            'label' => __('Delete'),
+                        ],
                     ];
                 }
-                // echo ("<pre>");print_r($item);die;
             }
         }
         return $dataSource; 
     }
 }
+
+
+

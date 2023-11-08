@@ -9,7 +9,7 @@
 -->
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
     <menu>
-        <add id="MB_Grid::view" title="MB Blog" module="MB_Grid" sortOrder="50" resource="MB_Grid::view"/>
+        <add id="MB_Grid::view" title="MB Grid" module="MB_Grid" sortOrder="50" resource="MB_Grid::view"/>
         <add id="MB_Grid::menu" title="Manage Grid" module="MB_Grid" sortOrder="20" parent="MB_Grid::view" action="grid/index/index" resource="MB_Grid::menu"/>
     </menu>
 </config>

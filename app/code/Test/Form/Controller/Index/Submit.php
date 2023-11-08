@@ -40,7 +40,6 @@ class Submit extends Action
         $resultRedirect = $this->resultFactory->create(ResultFactory::TYPE_REDIRECT);
         $resultRedirect->setUrl($this->_redirect->getRefererUrl());
         return $resultRedirect;
-        echo("gdvfghfv");print_r($data);die;
     }
     
 }

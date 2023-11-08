@@ -19,6 +19,7 @@ class Save extends Action
     public function execute()
     {
         $postData = $this->getRequest()->getPostValue();
+        // echo "<pre>";print_r($postData);die();
         if ($postData) {
             $id = $postData['entity_id']; // Replace with your primary key field name
             $model = $this->form->load($id);
@@ -47,7 +48,7 @@ class Save extends Action
                 $this->messageManager->addError($e->getMessage());
 
                 $resultRedirect = $this->resultRedirectFactory->create();
-                return $resultRedirect->setPath('*/*/edit', ['id' => $id]);
+                return $resultRedirect->setPath('test_form/index/edit', ['id' => $id]);
             }
         }
     }
