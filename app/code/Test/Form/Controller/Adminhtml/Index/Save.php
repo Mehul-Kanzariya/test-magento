@@ -40,7 +40,7 @@ class Save extends Action
                 // Save the model
                 $model->save();
 
-                $this->messageManager->addSuccess(__('Data has been saved successfully.'));
+                $this->messageManager->addSuccess(__('Data has been Saved successfully!'));
 
                 $resultRedirect = $this->resultRedirectFactory->create();
                 return $resultRedirect->setPath('*/*/');

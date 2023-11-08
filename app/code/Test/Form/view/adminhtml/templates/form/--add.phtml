@@ -1,30 +1,26 @@
-<?php $block = $this->getLayout()->getBlock('test_form_form_edit'); ?>
-<?php $entity_id = $this->getRequest()->getParam('entity_id'); // Replace with the ID of the product you want to edit ?>
-<?php $formData = $block->getFormData($entity_id); ?>
- 
 <form id="edit_form" action="<?= $block->getUrl('test_form/index/save')?>" method="post" enctype="multipart/form-data">
     <?= $block->getBlockHtml('formkey') ?>
     <div class="admin__field">
             <div class="admin__field-control">
-                <input type="hidden" id="username" name="entity_id" class="input-text" value="<?= $formData->getEntityId() ?>"/>
+                <input type="hidden" id="username" name="entity_id" class="input-text"/>
             </div>
         </div>
         <div class="admin__field">
             <label class="admin__field-label" for="username"><span><?= $block->escapeHtml(__('Username')) ?></span></label>
             <div class="admin__field-control">
-                <input type="text" id="username" name="username" class="input-text" value="<?= $formData->getUsername() ?>"/>
+                <input type="text" id="username" name="username" class="input-text"/>
             </div>
         </div>
         <div class="admin__field">
             <label class="admin__field-label" for="email"><span><?= $block->escapeHtml(__('Email')) ?></span></label>
             <div class="admin__field-control">
-                <input type="text" id="email" name="email" class="input-text" value="<?= $formData->getEmail() ?>"/>
+                <input type="text" id="email" name="email" class="input-text"/>
             </div>
         </div>
         <div class="admin__field">
             <label class="admin__field-label" for="telephone"><span><?= $block->escapeHtml(__('Telephone')) ?></span></label>
             <div class="admin__field-control">
-                <input type="text" id="telephone" name="telephone" class="input-text" value="<?= $formData->getTelephone() ?>"/>
+                <input type="text" id="telephone" name="telephone" class="input-text"/>
             </div>
         </div>
         <div class="admin__actions-toolbar">
