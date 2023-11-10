@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Mavenbird_Customgrid::customgrid" title="Mavenbird" module="Mavenbird_Customgrid" sortOrder="51" resource="Mavenbird_Customgrid::customgrid"/>
+        <add id="Mavenbird_Customgrid::post" title="Grid" module="Mavenbird_Customgrid" sortOrder="10" action="mavenbird_customgrid/index/index" resource="Mavenbird_Customgrid::grid" parent="Mavenbird_Customgrid::customgrid"/>
+    </menu>
+</config>

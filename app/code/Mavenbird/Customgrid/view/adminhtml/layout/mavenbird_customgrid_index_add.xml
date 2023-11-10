@@ -3,7 +3,7 @@
     <update handle="styles"/>
     <body>
         <referenceContainer name="content">
-            <block class="Test\Form\Block\Adminhtml\Form\Add" name="test_form_form_add" template="Test_Form::form/add.phtml"></block>
+            <uiComponent name="mavenbird_customgrid_new_form"/>
         </referenceContainer>
     </body>
 </page>
