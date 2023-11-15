@@ -128,7 +128,7 @@
     <actionsColumn name="edit" class="Mavenbird\Customgrid\Ui\Component\Category\Listing\Column\Actions">
         <argument name="data" xsi:type="array">
             <item name="config" xsi:type="array">
-                <item name="urlPath" xsi:type="string">mavenbird_customgrid/index/index</item>
+                <item name="urlPath" xsi:type="string">mavenbird_customgrid/index/edit</item>
                 <item name="urlEntityParamName" xsi:type="string">entity_id</item>
                 <item name="label" xsi:type="string" translate="true">Action</item>
             </item>

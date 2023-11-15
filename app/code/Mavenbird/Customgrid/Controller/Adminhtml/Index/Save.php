@@ -1,7 +1,7 @@
 <?php
 
 namespace Mavenbird\Customgrid\Controller\Adminhtml\Index;
-die("testestestestestestAA________________");
+// die("testestestestestestAA________________");
 
 use Mavenbird\Customgrid\Model\CustomgridFactory;
 class Save extends \Magento\Backend\App\Action
